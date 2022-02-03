@@ -1,0 +1,6 @@
+module Pods_Jonoks_JonoksTests {
+  umbrella header "Pods-Jonoks-JonoksTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

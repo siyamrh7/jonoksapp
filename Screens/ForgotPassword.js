@@ -22,7 +22,7 @@ const ForgotPassword = ({ navigation }) => {
 
                 <View>
                     <TextInput onChangeText={text => setEmail(text)}
-                        defaultValue={email} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20 }} placeholder="EMAIL ADDRESS" placeholderTextColor="gray"></TextInput>
+                        defaultValue={email} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20 ,paddingVertical:15}} placeholder="EMAIL ADDRESS" placeholderTextColor="gray"></TextInput>
 
                     <TouchableOpacity onPress={submitHandle} style={{ backgroundColor: 'orange', paddingVertical: 15, marginTop: 20, borderRadius: 5 }}><Text style={{ textAlign: 'center', fontWeight: 'bold', color: 'white', fontSize: 16 }}>Get verification code</Text></TouchableOpacity>
                 </View>

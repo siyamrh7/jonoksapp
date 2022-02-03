@@ -177,7 +177,7 @@ const getPermissions=async()=>{
    const response=await request(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE)
    if(response==='granted'){
      Geolocation.getCurrentPosition(position=>{setLat(position.coords.latitude)
-      setLan(position.coords.longitude)})
+      setLan(position.coords.longitude)},error=>console.log(error),{ enableHighAccuracy: true, timeout: 15000,maximumAge:600000})
    }
   }else{
     const response=await request(PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION)
@@ -215,8 +215,8 @@ useFocusEffect(
   return (
     <View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setTitle(value)} placeholder="JOB TITLE" multiline={true} style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10 }} />
-        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setDescription(value)} multiline={true} placeholder="JOB DESCRIPTION" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10 }} />
+        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setTitle(value)} placeholder="JOB TITLE" multiline={true} style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10,paddingVertical:15 }} />
+        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setDescription(value)} multiline={true} placeholder="JOB DESCRIPTION" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10,paddingVertical:15 }} />
 
 
         <DropDownPicker
@@ -262,11 +262,11 @@ useFocusEffect(
           style={{ borderWidth: 1, borderColor: "orange", marginTop: 10, zIndex: 9 }}
           placeholderStyle={{ color: "gray" }}
         />
-        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setSalary(value)} multiline={true} keyboardType="numeric" placeholder="SALARY" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10 }} />
-        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setAddress(value)} placeholder="ADDRESS" multiline={true} style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10 }} />
-        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setCity(value)} multiline={true} placeholder="CITY" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10 }} />
-        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setCountry(value)} placeholder="COUNTRY" multiline={true} style={{ color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10 }} />
-        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setContact(value)} keyboardType='numeric' multiline={true} placeholder="CONTACT NUMBER" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10 }} />
+        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setSalary(value)} multiline={true} keyboardType="numeric" placeholder="SALARY" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10,paddingVertical:15 }} />
+        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setAddress(value)} placeholder="ADDRESS" multiline={true} style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10,paddingVertical:15 }} />
+        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setCity(value)} multiline={true} placeholder="CITY" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10,paddingVertical:15 }} />
+        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setCountry(value)} placeholder="COUNTRY" multiline={true} style={{ color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10,paddingVertical:15 }} />
+        <TextInput placeholderTextColor={'black'} onChangeText={(value) => setContact(value)} keyboardType='numeric' multiline={true} placeholder="CONTACT NUMBER" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 10,paddingVertical:15 }} />
 
 
 

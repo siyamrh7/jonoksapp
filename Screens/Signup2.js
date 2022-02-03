@@ -37,15 +37,15 @@ AsyncStorage.setItem('token',res.data.data).then(res=> navigation.navigate("Tabs
 
                 <View>
                     <TextInput   onChangeText={text => setName(text)}
-        defaultValue={name} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20 }} placeholder="FULL NAME" placeholderTextColor="gray"></TextInput>
+        defaultValue={name} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20,paddingVertical:15 }} placeholder="FULL NAME" placeholderTextColor="gray"></TextInput>
                     <TextInput  onChangeText={text => setEmail(text)}
-        defaultValue={email} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20 }} placeholder="EMAIL ADDRESS" placeholderTextColor="gray"></TextInput>
+        defaultValue={email} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20,paddingVertical:15 }} placeholder="EMAIL ADDRESS" placeholderTextColor="gray"></TextInput>
                     <TextInput  onChangeText={text => setPhone(text)}
-        defaultValue={phone} keyboardType='numeric' style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20 }} placeholder="PHONE NUMBER" placeholderTextColor="gray"></TextInput>
+        defaultValue={phone} keyboardType='numeric' style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20,paddingVertical:15 }} placeholder="PHONE NUMBER" placeholderTextColor="gray"></TextInput>
                     <TextInput  onChangeText={text => setAddress(text)}
-        defaultValue={address} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20 }} placeholder="ADDRESS" placeholderTextColor="gray"></TextInput>
+        defaultValue={address} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20,paddingVertical:15 }} placeholder="ADDRESS" placeholderTextColor="gray"></TextInput>
                     <TextInput  onChangeText={text => setPassword(text)}
-        defaultValue={password} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20 }} placeholder="PASSWORD" placeholderTextColor="gray"></TextInput>
+        defaultValue={password} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20,paddingVertical:15 }} placeholder="PASSWORD" placeholderTextColor="gray"></TextInput>
                     <TouchableOpacity style={{ backgroundColor: 'orange', paddingVertical: 15, marginTop: 20, borderRadius: 5 }} onPress={submitHandle}><Text style={{ textAlign: 'center', fontWeight: 'bold', color: 'white', fontSize: 16 }}>REGISTER</Text></TouchableOpacity>
                 </View>
                 </ScrollView>

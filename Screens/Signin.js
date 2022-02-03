@@ -27,9 +27,9 @@ const Signin = ({ navigation }) => {
 
                 <View>
                     <TextInput onChangeText={text => setEmail(text)}
-                        defaultValue={email} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20 }} placeholder="EMAIL ADDRESS" placeholderTextColor="gray"></TextInput>
+                        defaultValue={email} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20,paddingVertical:15 }} placeholder="EMAIL ADDRESS" placeholderTextColor="gray"></TextInput>
                     <TextInput onChangeText={text => setPassword(text)}
-                        defaultValue={password} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20 }} placeholder="PASSWORD" placeholderTextColor="gray"></TextInput>
+                        defaultValue={password} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20,paddingVertical:15 }} placeholder="PASSWORD" placeholderTextColor="gray"></TextInput>
                     <TouchableOpacity onPress={submitHandle} style={{ backgroundColor: 'orange', paddingVertical: 15, marginTop: 20, borderRadius: 5 }}><Text style={{ textAlign: 'center', fontWeight: 'bold', color: 'white', fontSize: 16 }}>LOGIN</Text></TouchableOpacity>
                 </View>
 

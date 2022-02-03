@@ -30,8 +30,8 @@ const ChangePassword = ({navigation}) => {
   return (
     <View style={{ flex: 1, backgroundColor: 'white' }}>
       <View style={{ marginTop: 30 }}>
-        <TextInput placeholderTextColor={'black'} onChangeText={(e) => setpassword(e)} placeholder="Password" multiline={true} style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10 }} />
-        <TextInput placeholderTextColor={'black'} onChangeText={(e) => setnewpassword(e)} multiline={true} placeholder="New Password" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 20 }} />
+        <TextInput placeholderTextColor={'black'} onChangeText={(e) => setpassword(e)} placeholder="Password" multiline={true} style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10,paddingVertical:15 }} />
+        <TextInput placeholderTextColor={'black'} onChangeText={(e) => setnewpassword(e)} multiline={true} placeholder="New Password" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10,paddingVertical:15, marginTop: 20 }} />
 
         <TouchableOpacity
           style={{ backgroundColor: 'orange', alignItems: "center", marginTop: 30, marginHorizontal: 10, borderRadius: 20 }}

@@ -43,8 +43,8 @@ const CreatePost = ({navigation}) => {
   return (
     <View style={{ flex: 1, backgroundColor: 'white' }}>
       <View style={{ marginTop: 30 }}>
-        <TextInput placeholderTextColor={'black'} onChangeText={(e) => setTitle(e)} placeholder="POST TITLE" multiline={true} style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10 }} />
-        <TextInput placeholderTextColor={'black'} onChangeText={(e) => setDescription(e)} multiline={true} placeholder="POST DESCRIPTION" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10, marginTop: 20 }} />
+        <TextInput placeholderTextColor={'black'} onChangeText={(e) => setTitle(e)} placeholder="POST TITLE" multiline={true} style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10 ,paddingVertical:15}} />
+        <TextInput placeholderTextColor={'black'} onChangeText={(e) => setDescription(e)} multiline={true} placeholder="POST DESCRIPTION" style={{color:'black', borderBottomWidth: 1, borderBottomColor: 'orange', paddingHorizontal: 10,paddingVertical:15, marginTop: 20 }} />
 
         <TouchableOpacity
           style={{ ...styles.buttonStyle, backgroundColor: 'gray' }}

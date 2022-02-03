@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Geolocation from '@react-native-community/geolocation'
 import { request,PERMISSIONS } from 'react-native-permissions';
-import {  Text, TouchableOpacity, View, StyleSheet, ScrollView,Platform, Image, useWindowDimensions, TextInput } from 'react-native'
+import {  Text, TouchableOpacity, View, StyleSheet, ScrollView,Platform, Image, useWindowDimensions, TextInput ,SafeAreaView} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 import MapView from 'react-native-maps'
 import LocationServicesDialogBox from "react-native-android-location-services-dialog-box";
@@ -119,7 +119,7 @@ const Jobs = ({navigation}) => {
          const response=await request(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE)
          if(response==='granted'){
            Geolocation.getCurrentPosition(position=>{setLat(position.coords.latitude)
-            setLan(position.coords.longitude)})
+            setLan(position.coords.longitude)},error=>console.log(error),{ enableHighAccuracy: true, timeout: 15000,maximumAge:100000})
          }
         }else{
           const response=await request(PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION)
@@ -156,7 +156,8 @@ const search=()=>{
   getData(save)
 }
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
+          <View style={{position: "relative", right: 0, top: 0,zIndex:20}}>
 <DropDownPicker
       open={open}
       value={value}
@@ -167,11 +168,13 @@ const search=()=>{
       onChangeValue={(value)=>setCategory(value)}
       
       placeholder="Select Jobs Category"
-      style={{borderWidth:1,borderColor:"orange",marginTop:10,zIndex:11}}
+      style={{borderWidth:1,borderColor:"orange",marginTop:0,Index:1,background:"none"}}
       placeholderStyle={{color:"gray"}}
+      containerStyle={{zIndex:1}}
       searchable
     />
-            <Icon onPress={search}  style={{ position: "absolute", right: 40, top: 24,zIndex:20 }} name="search" size={24} color="gray" />
+            <Icon onPress={search}  style={{ position: "absolute", right: 40, top: 14,zIndex:10 }} name="search" size={24} color="gray" />
+    </View>
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
                 <TouchableOpacity style={styles.box} onPress={ ()=> setCategory("Photographer")}><Text style={styles.txt}>Photographers</Text></TouchableOpacity>
                 <TouchableOpacity style={styles.box} onPress={ ()=> setCategory("Plumber")}><Text style={styles.txt}>Plumbers</Text></TouchableOpacity>
@@ -211,7 +214,7 @@ const search=()=>{
 
 
            
-        </View>
+        </SafeAreaView>
 
     )
 }
@@ -220,7 +223,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: "#fff",
         flex: 1,
-
+position:'relative'
     },
     box: {
         backgroundColor: 'orange',

@@ -25,10 +25,10 @@ const NewPassword = ({ navigation }) => {
                 <View>
                     <TextInput onChangeText={text => setCode(text)}
                         keyboardType='numeric'
-                        defaultValue={code} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20 }} placeholder="ENTER 6 DIGIT CODE" placeholderTextColor="gray"></TextInput>
+                        defaultValue={code} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20,paddingVertical:15 }} placeholder="ENTER 6 DIGIT CODE" placeholderTextColor="gray"></TextInput>
 
                     <TextInput onChangeText={text => setNewpassword(text)}
-                        defaultValue={newpassword} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20 }} placeholder="ENTER NEW PASSWORD" placeholderTextColor="gray"></TextInput>
+                        defaultValue={newpassword} style={{ borderColor: 'orange', borderWidth: 2, marginVertical: 10, color: 'black', paddingHorizontal: 20,paddingVertical:15 }} placeholder="ENTER NEW PASSWORD" placeholderTextColor="gray"></TextInput>
                     <TouchableOpacity onPress={submitHandle} style={{ backgroundColor: 'orange', paddingVertical: 15, marginTop: 20, borderRadius: 5 }}><Text style={{ textAlign: 'center', fontWeight: 'bold', color: 'white', fontSize: 16 }}>RESET PASSWORD</Text></TouchableOpacity>
                 </View>
 

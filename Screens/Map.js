@@ -60,7 +60,7 @@ const Map = ({ route, navigation }) => {
     getPermissions()
   }, [])
   if (!lat || !lan) { return null }
-  if (jobs.length === 0) { return null }
+  if (jobs.length === 0) { return <Text>No jobs found nearest you...</Text> }
   return (
     <View style={styles.container}>
       <MapView

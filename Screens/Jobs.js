@@ -167,7 +167,7 @@ const search=()=>{
       setItems={setItems}
       onChangeValue={(value)=>setCategory(value)}
       
-      placeholder="Select Jobs Category"
+      placeholder="Find nearest jobs by choosing categories..."
       style={{borderWidth:1,borderColor:"orange",marginTop:0,Index:1,background:"none"}}
       placeholderStyle={{color:"gray"}}
       containerStyle={{zIndex:1}}

@@ -66,7 +66,7 @@ function App() {
         <Stack.Screen name="CreatePost" component={CreatePost} options={{ headerTitle: "BACK", headerTintColor: 'orange' }} />
         <Stack.Screen name="CreateJob" component={CreateJob} options={{ headerTitle: "BACK", headerTintColor: 'orange' }} />
         <Stack.Screen name="Job" component={Job} options={{ headerTitle: "BACK", headerTintColor: 'orange' }} />
-        <Stack.Screen name="Map" component={Map} options={{ headerTitle: "BACK", headerTintColor: 'orange' }} />
+        <Stack.Screen name="Map" component={Map} options={{ headerTitle: "Nearest Jobs", headerTintColor: 'orange' }} />
         <Stack.Screen name="Pay" component={Pay} options={{ headerTitle: "BACK", headerTintColor: 'orange' }} />
         <Stack.Screen name="About" component={About} options={{ headerTitle: "BACK", headerTintColor: 'orange' }} />
         <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} options={{ headerTitle: "BACK", headerTintColor: 'orange' }} />

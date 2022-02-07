@@ -60,7 +60,7 @@ const Home = ({ route, navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
         <View>
-            <TextInput placeholder='Search here' style={{backgroundColor:'orange',color:'white',paddingHorizontal:20,paddingVertical:15}} onChangeText={(e)=>getData(e)}/>
+            <TextInput placeholderTextColor="white" placeholder='Search post here...' style={{backgroundColor:'orange',color:'white',paddingHorizontal:20,paddingVertical:15}} onChangeText={(e)=>getData(e)}/>
         </View>
             <ScrollView showsVerticalScrollIndicator={false}>
                 {
